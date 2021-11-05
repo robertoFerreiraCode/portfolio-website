@@ -1,1 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #24346c;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: #eae8dc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  list-style-type: none;
+}
+.name-container__a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #be2623;
+}
+.name-container__a:hover {
+  color: #24346c;
+}
+
+.link-container {
+  height: 100%;
+  width: 60%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item__a {
+  color: #24346c;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-item__a--title {
+  color: #be2623;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-item--title {
+  margin-left: 10px;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid white;
+}
+
+.nav-item:hover .nav-item__a {
+  color: #be2623;
+}
+
+.nav-item--title:hover .nav-item__a--title {
+  color: #24346c;
+}
+
+body {
+  margin: 0;
+}

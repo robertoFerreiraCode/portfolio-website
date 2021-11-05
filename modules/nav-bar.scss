@@ -1,2 +1,80 @@
 @use "./../partials/palette";
 @use "./../partials/typography";
+@use "./../partials/devices" as media;
+
+body {
+    font-family: typography.$primary-font;
+    background-color: palette.$primary-blue;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: palette.$primary-sand;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    list-style-type: none;
+    &__a {
+        text-decoration: none;
+        font-weight: bold;
+        color: palette.$primary-red;
+    }
+    &__a:hover {
+        color: palette.$primary-blue;
+    }
+}
+
+.link-container {
+    height: 100%;
+    width: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__a {
+        // height: 100%;
+        color: palette.$primary-blue;
+        text-decoration: none;
+        font-weight: bold;
+        &--title {
+            color: palette.$primary-red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    &--title {
+        margin-left: 10px;
+    }
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav-item:hover .nav-item__a {
+    // color: palette.$primary-blue-light;
+    color: palette.$primary-red;
+}
+
+.nav-item--title:hover .nav-item__a--title {
+    // color: palette.$primary-blue-light;
+    color: palette.$primary-blue;
+}
