@@ -22,7 +22,13 @@ $lg: 1200px; // large
 }
 
 @mixin laptop {
-    @media only screen and (min-width: $md + 1px) and (max-width: $lg) {
+    @media only screen and (min-width: $md + 1px) {
+        @content;
+    }
+}
+
+@mixin not-phone {
+    @media only screen and (min-width: $xs + 1px) {
         @content;
     }
 }

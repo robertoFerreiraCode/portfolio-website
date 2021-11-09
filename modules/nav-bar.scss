@@ -1,68 +1,114 @@
 @use "./../partials/palette";
 @use "./../partials/typography";
+@use "./../partials/mixins";
 @use "./../partials/devices" as media;
 
-body {
-    font-family: typography.$primary-font;
-    background-color: palette.$primary-blue;
-}
-
-nav {
+.nav {
+    @include mixins.flex-jc-sb;
     height: 50px;
     width: 100%;
     background-color: palette.$primary-sand;
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
 }
 
 .name-container {
-    width: 40%;
-    display: flex;
-    align-items: center;
+    @include mixins.flex-ai-c;
+    // width: 40%;
     padding: 10px;
     margin: 0;
-    list-style-type: none;
     &__a {
-        text-decoration: none;
         font-weight: bold;
         color: palette.$primary-red;
     }
     &__a:hover {
         color: palette.$primary-blue;
     }
+    @include media.phone {
+        width: 60%;
+    }
+    @include media.not-phone {
+        width: 40%;
+    }
 }
 
 .link-container {
+    @include mixins.flex-ai-c;
+    @include mixins.flex-jc-c;
     height: 100%;
-    width: 60%;
     margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
+    @include media.phone {
+        width: 0px;
+    }
+    @include media.not-phone {
+        width: 60%;
+    }
 }
 
 .nav-item {
+    @include mixins.flex-ai-c;
+    @include mixins.flex-jc-c;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     &__a {
-        // height: 100%;
+        // height: 100%; -> bug
         color: palette.$primary-blue;
-        text-decoration: none;
         font-weight: bold;
         &--title {
             color: palette.$primary-red;
-            text-decoration: none;
-            font-weight: bold;
         }
     }
     &--title {
         margin-left: 10px;
+        font-weight: bold;
     }
+    @include media.phone {
+        &__a {
+            display: none;
+            &--title {
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        }
+    }
+    @include media.tablet {
+        &__a {
+            &--title {
+                font-size: 20px;
+            }
+        }
+    }
+    @include media.tablet-landscape {
+        &__a {
+            &--title {
+                font-size: 25px;
+            }
+        }
+    }
+    @include media.laptop {
+        &__a {
+            &--title {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.hamburger-container {
+    @include mixins.flex-ai-c;
+    &__checkbtn {
+        font-size: 20px;
+        color: palette.$primary-blue;
+        margin-right: 20px;
+        cursor: pointer;
+        @include media.not-phone {
+            display: none;
+        }
+    }
+}
+
+#check {
+    display: none;
 }
 
 .nav-item:hover {
