@@ -16,3 +16,10 @@
     @include flex;
     align-items: center;
 }
+
+@mixin flex-fd-col {
+    @include flex;
+    @include flex-jc-c;
+    @include flex-ai-c;
+    flex-direction: column;
+}

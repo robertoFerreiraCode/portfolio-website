@@ -130,13 +130,13 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background-color: #24346c;
   margin: 0px;
   padding: 0px;
 }
 
 section {
   padding: 50px 0;
+  width: 100%;
 }
 
 a,
@@ -147,4 +147,65 @@ a:hover {
 
 ul {
   list-style-type: none;
+}
+
+.background-img {
+  background-image: url("./assets/images/background-img.jpg");
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+}
+
+.header-container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
+.header-container__h3 {
+  color: white;
+  padding-top: 50px;
+}
+
+.name-box {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 40%;
+  border: 10px solid #eae8dc;
+  border-radius: 25px;
+  background-color: #24346c;
+}
+.name-box__h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: #000 0px 0px 3px;
+  margin: 0;
+}
+.name-box__h2 {
+  color: #eae8dc;
+}
+@media only screen and (max-width: 576px) {
+  .name-box {
+    width: 60%;
+    height: 55%;
+  }
+  .name-box__h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .name-box {
+    width: 55%;
+    height: 55%;
+  }
 }
