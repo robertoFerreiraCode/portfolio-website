@@ -3,13 +3,14 @@
 
 body {
     font-family: typography.$primary-font;
-    background-color: palette.$primary-blue;
+    // background-color: palette.$primary-blue;
     margin: 0px;
     padding: 0px;
 }
 
 section {
     padding: 50px 0;
+    width: 100%;
 }
 
 a,
