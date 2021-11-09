@@ -1,1 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  background-color: #eae8dc;
+  position: fixed;
+  top: 0;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+.name-container__a {
+  font-weight: bold;
+  color: #be2623;
+}
+.name-container__a:hover {
+  color: #24346c;
+}
+@media only screen and (max-width: 576px) {
+  .name-container {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .name-container {
+    width: 40%;
+  }
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+@media only screen and (max-width: 576px) {
+  .link-container {
+    width: 0px;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .link-container {
+    width: 60%;
+  }
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.nav-item__a {
+  color: #24346c;
+  font-weight: bold;
+}
+.nav-item__a--title {
+  color: #be2623;
+}
+.nav-item--title {
+  margin-left: 10px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 576px) {
+  .nav-item__a {
+    display: none;
+  }
+  .nav-item__a--title {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .nav-item__a--title {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .nav-item__a--title {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .nav-item__a--title {
+    font-size: 25px;
+  }
+}
+
+.hamburger-container {
+  display: flex;
+  align-items: center;
+}
+.hamburger-container__checkbtn {
+  font-size: 20px;
+  color: #24346c;
+  margin-right: 20px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 577px) {
+  .hamburger-container__checkbtn {
+    display: none;
+  }
+}
+
+#check {
+  display: none;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid white;
+}
+
+.nav-item:hover .nav-item__a {
+  color: #be2623;
+}
+
+.nav-item--title:hover .nav-item__a--title {
+  color: #24346c;
+}

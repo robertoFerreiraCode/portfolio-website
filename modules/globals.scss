@@ -1,0 +1,23 @@
+@use "./../partials/typography";
+@use "./../partials/palette";
+
+body {
+    font-family: typography.$primary-font;
+    background-color: palette.$primary-blue;
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
