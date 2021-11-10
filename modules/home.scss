@@ -3,6 +3,10 @@
 @use "./../partials/mixins";
 @use "./../partials/devices" as media;
 
+#home {
+    // margin: 0;
+    padding-bottom: 0;
+}
 .background-img {
     background-image: url("./assets/images/background-img.jpg");
     background-position: center;
