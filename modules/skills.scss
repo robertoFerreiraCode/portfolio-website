@@ -11,6 +11,9 @@
         @include media.phone {
             display: block;
         }
+        @include media.tablet {
+            display: block;
+        }
     }
 
     .split-container {
@@ -41,6 +44,9 @@
         @include media.phone {
             width: 100%;
         }
+        @include media.tablet {
+            width: 100%;
+        }
 
         .icon-container {
             @include mixins.flex-jc-c;
@@ -52,6 +58,10 @@
                 gap: 100px 200px;
                 font-size: 30px;
                 color: white;
+                @include media.tablet-landscape {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                }
             }
         }
     }
