@@ -386,3 +386,35 @@ ul {
     grid-template-rows: repeat(3, 1fr);
   }
 }
+
+#contact {
+  padding: 0;
+}
+#contact .contact-container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray;
+  height: 250px;
+}
+#contact .contact-container__header {
+  font-size: 40px;
+  color: #24346c;
+  text-shadow: #000 0px 0px 1px;
+}
+#contact .icons {
+  font-size: 30px;
+  padding: 30px 50px;
+}
+#contact a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #24346c;
+  text-decoration: none;
+}
+#contact a:hover {
+  color: #be2623;
+}
