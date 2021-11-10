@@ -312,3 +312,61 @@ ul {
 #projects .project-info__icons:hover {
   color: white;
 }
+
+#skills {
+  padding: 0;
+}
+#skills .flex-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media only screen and (max-width: 576px) {
+  #skills .flex-container {
+    display: block;
+  }
+}
+#skills .split-container {
+  width: 50%;
+  padding: 50px 0;
+  background-color: white;
+}
+#skills .split-container__header {
+  color: white;
+  text-align: center;
+  text-shadow: #000 0px 0px 1px;
+  font-weight: bold;
+  font-size: 40px;
+}
+#skills .split-container__header--blue {
+  color: #24346c;
+}
+#skills .split-container__para {
+  font-size: 20px;
+  color: white;
+  padding: 0 100px;
+}
+#skills .split-container__para--blue {
+  color: #24346c;
+}
+#skills .split-container--blue {
+  background-color: #24346c;
+}
+@media only screen and (max-width: 576px) {
+  #skills .split-container {
+    width: 100%;
+  }
+}
+#skills .split-container .icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+#skills .split-container .icon-container__icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 100px 200px;
+  font-size: 30px;
+  color: white;
+}
