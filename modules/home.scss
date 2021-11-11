@@ -6,51 +6,53 @@
 #home {
     // margin: 0;
     padding-bottom: 0;
-}
-.background-img {
-    background-image: url("./assets/images/background-img.jpg");
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    background-size: contain;
-    // background-repeat: repeat;
-}
+    width: 100vw;
 
-.header-container {
-    @include mixins.flex-fd-col;
-    width: 100%;
-    height: 80%;
-    &__h3 {
-        color: white;
-        padding-top: 50px;
+    .background-img {
+        background-image: url("./assets/images/sky-img.jpg");
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
     }
-}
 
-.name-box {
-    @include mixins.flex-fd-col;
-    width: 50%;
-    height: 40%;
-    border: 10px solid palette.$primary-sand;
-    border-radius: 25px;
-    background-color: palette.$primary-blue;
-    &__h1 {
-        color: white;
-        font-size: 40px;
-        text-shadow: #000 0px 0px 3px;
-        margin: 0;
-    }
-    &__h2 {
-        color: palette.$primary-sand;
-    }
-    @include media.phone {
-        width: 60%;
-        height: 55%;
-        &__h1 {
-            font-size: 30px;
+    .header-container {
+        @include mixins.flex-fd-col;
+        width: 100%;
+        height: 80%;
+        &__h3 {
+            color: white;
+            padding-top: 50px;
         }
     }
-    @include media.tablet {
-        width: 55%;
-        height: 55%;
+
+    .name-box {
+        @include mixins.flex-fd-col;
+        width: 50%;
+        height: 40%;
+        border: 10px solid palette.$primary-sand;
+        border-radius: 25px;
+        background-color: palette.$primary-blue;
+        opacity: 0.9;
+        &__h1 {
+            color: white;
+            font-size: 40px;
+            text-shadow: #000 0px 0px 3px;
+            margin: 0;
+        }
+        &__h2 {
+            color: palette.$primary-red;
+        }
+        @include media.phone {
+            width: 60%;
+            height: 55%;
+            &__h1 {
+                font-size: 30px;
+            }
+        }
+        @include media.tablet {
+            width: 55%;
+            height: 55%;
+        }
     }
 }

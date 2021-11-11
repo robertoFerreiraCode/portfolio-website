@@ -6,10 +6,11 @@
 .nav {
     @include mixins.flex-jc-sb;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     background-color: palette.$primary-sand;
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 
 .name-container {
@@ -17,6 +18,7 @@
     // width: 40%;
     padding: 10px;
     margin: 0;
+    width: 40vw;
     &__a {
         font-weight: bold;
         color: palette.$primary-red;
@@ -24,12 +26,12 @@
     &__a:hover {
         color: palette.$primary-blue;
     }
-    @include media.phone {
-        width: 60%;
-    }
-    @include media.not-phone {
-        width: 40%;
-    }
+    // @include media.phone {
+    //     width: 60vw;
+    // }
+    // @include media.not-phone {
+    //     width: 40vw;
+    // }
 }
 
 .link-container {
@@ -37,12 +39,13 @@
     @include mixins.flex-jc-c;
     height: 100%;
     margin: 0;
-    @include media.phone {
-        width: 0px;
-    }
-    @include media.not-phone {
-        width: 60%;
-    }
+    width: 60vw;
+    // @include media.phone {
+    //     width: 60vw;
+    // }
+    // @include media.not-phone {
+    //     width: 60vw;
+    // }
 }
 
 .nav-item {
@@ -51,7 +54,7 @@
     height: 100%;
     width: 100%;
     &__a {
-        // height: 100%; -> bug
+        // height: 100%;
         color: palette.$primary-blue;
         font-weight: bold;
         &--title {
@@ -64,7 +67,7 @@
     }
     @include media.phone {
         &__a {
-            display: none;
+            // display: none;
             &--title {
                 font-size: 20px;
                 padding-left: 10px;
@@ -96,11 +99,12 @@
 
 .hamburger-container {
     @include mixins.flex-ai-c;
-    &__checkbtn {
+    &__icon {
         font-size: 20px;
         color: palette.$primary-blue;
         margin-right: 20px;
         cursor: pointer;
+        list-style: none;
         @include media.not-phone {
             display: none;
         }

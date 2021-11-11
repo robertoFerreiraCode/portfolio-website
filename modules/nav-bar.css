@@ -3,10 +3,11 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
-  width: 100%;
-  background-color: #eae8dc;
+  width: 100vw;
+  background-color: lightgrey;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 .name-container {
@@ -14,23 +15,16 @@
   align-items: center;
   padding: 10px;
   margin: 0;
+  width: 40vw;
 }
+
 .name-container__a {
   font-weight: bold;
-  color: #be2623;
+  color: #ff5773;
 }
+
 .name-container__a:hover {
-  color: #24346c;
-}
-@media only screen and (max-width: 576px) {
-  .name-container {
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .name-container {
-    width: 40%;
-  }
+  color: #061536;
 }
 
 .link-container {
@@ -40,16 +34,7 @@
   justify-content: center;
   height: 100%;
   margin: 0;
-}
-@media only screen and (max-width: 576px) {
-  .link-container {
-    width: 0px;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .link-container {
-    width: 60%;
-  }
+  width: 60vw;
 }
 
 .nav-item {
@@ -60,21 +45,22 @@
   height: 100%;
   width: 100%;
 }
+
 .nav-item__a {
-  color: #24346c;
+  color: #061536;
   font-weight: bold;
 }
+
 .nav-item__a--title {
-  color: #be2623;
+  color: #ff5773;
 }
+
 .nav-item--title {
   margin-left: 10px;
   font-weight: bold;
 }
+
 @media only screen and (max-width: 576px) {
-  .nav-item__a {
-    display: none;
-  }
   .nav-item__a--title {
     font-size: 20px;
     padding-left: 10px;
@@ -95,23 +81,24 @@
     font-size: 25px;
   }
 }
-
 .hamburger-container {
   display: flex;
   align-items: center;
 }
-.hamburger-container__checkbtn {
+
+.hamburger-container__icon {
   font-size: 20px;
-  color: #24346c;
+  color: #061536;
   margin-right: 20px;
   cursor: pointer;
+  list-style: none;
 }
+
 @media only screen and (min-width: 577px) {
-  .hamburger-container__checkbtn {
+  .hamburger-container__icon {
     display: none;
   }
 }
-
 #check {
   display: none;
 }
@@ -121,9 +108,9 @@
 }
 
 .nav-item:hover .nav-item__a {
-  color: #be2623;
+  color: #ff5773;
 }
 
 .nav-item--title:hover .nav-item__a--title {
-  color: #24346c;
+  color: #061536;
 }

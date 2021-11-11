@@ -1,43 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 #projects {
-  background-color: #eae8dc;
-  width: 100%;
+  background-color: lightgrey;
+  width: 100vw;
+  min-height: 100vh;
 }
+
 #projects h1 {
-  color: #24346c;
+  color: #061536;
   text-shadow: #000 0px 0px 1px;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
 }
+
 #projects .flex-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
 }
+
 #projects .project-container {
   display: grid;
   gap: 20px;
-  padding: 0 15%;
+  margin: 5% 15%;
+  height: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+
 @media only screen and (max-width: 576px) {
   #projects .project-container {
     grid-template-columns: 1fr;
-    padding: 0 5%;
+    margin: 0 5%;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   #projects .project-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 5%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   #projects .project-container {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 10%;
   }
 }
 #projects .project {
@@ -47,18 +52,44 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 275px;
+  height: 375px;
   border-radius: 25px;
-  background-color: #24346c;
+  background-color: #061536;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #projects .project-img {
-  background-image: url("./assets/images/placeholder.jpg");
   background-position: center;
+  background-size: cover;
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
+
+#projects #calender.project-img {
+  background-image: url("./assets/images/calender.jpg");
+}
+
+#projects #crypto.project-img {
+  background-image: url("./assets/images/crypto.jpg");
+}
+
+#projects #email.project-img {
+  background-image: url("./assets/images/email.png");
+}
+
+#projects #game.project-img {
+  background-image: url("./assets/images/game.jpg");
+}
+
+#projects #invader.project-img {
+  background-image: url("./assets/images/invader.png");
+}
+
+#projects #notepad.project-img {
+  background-image: url("./assets/images/notepad.jpeg");
+}
+
 #projects .project-info {
   display: flex;
   display: flex;
@@ -69,31 +100,37 @@
   visibility: hidden;
   margin: 0;
   height: 100%;
-  background-color: #24346c;
+  background-color: #061536;
   border-radius: 25px;
 }
+
 #projects .project-info__header {
   color: white;
   font-size: 30px;
   margin-top: 0px;
   margin-bottom: 10px;
 }
+
 #projects .project-info__description {
   color: white;
   padding: 0 10px;
   text-align: center;
 }
+
 #projects .project-info__icons {
   padding: 0 20px;
   font-size: 35px;
-  color: #be2623;
+  color: #ff5773;
 }
+
 #projects .project:hover .project-img {
   visibility: hidden;
 }
+
 #projects .project:hover .project-info {
   visibility: visible;
 }
+
 #projects .project-info__icons:hover {
   color: white;
 }

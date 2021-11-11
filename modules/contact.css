@@ -1,32 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 #contact {
-    padding: 0;
+  padding: 0;
 }
+
 #contact .contact-container {
-    display: flex;
-    display: flex;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: lightgray;
-    height: 250px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray;
+  height: 100%;
 }
+
 #contact .contact-container__header {
-    font-size: 40px;
-    color: #24346c;
-    text-shadow: #000 0px 0px 1px;
+  font-size: 50px;
+  color: #061536;
+  text-shadow: #000 0px 0px 1px;
 }
+
 #contact .icons {
-    font-size: 30px;
-    padding: 30px 50px;
+  font-size: 50px;
+  padding: 30px 50px;
 }
+
 #contact a {
-    font-size: 20px;
-    font-weight: bold;
-    color: #24346c;
-    text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #061536;
+  text-decoration: none;
 }
+
 #contact a:hover {
-    color: #be2623;
+  color: #ff5773;
 }

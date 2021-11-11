@@ -5,7 +5,9 @@
 
 #projects {
     background-color: palette.$primary-sand;
-    width: 100%;
+    width: 100vw;
+    min-height: 100vh;
+
     h1 {
         color: palette.$primary-blue;
         text-shadow: #000 0px 0px 1px;
@@ -15,34 +17,34 @@
     }
 
     .flex-container {
-        @include mixins.flex-jc-c;
-        width: 100%;
+        @include mixins.flex-ai-c;
+        width: 100vw;
+        height: 100%;
         // background-color: palette.$primary-blue-light;
     }
 
     .project-container {
         display: grid;
         gap: 20px;
-        padding: 0 15%;
+        margin: 5% 15%;
+        height: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         @include media.phone {
             grid-template-columns: 1fr;
-            padding: 0 5%;
+            margin: 0 5%;
         }
         @include media.tablet {
             grid-template-columns: repeat(2, 1fr);
-            padding: 0 5%;
         }
         @include media.tablet-landscape {
             grid-template-columns: repeat(3, 1fr);
-            padding: 0 10%;
         }
     }
 
     .project {
         @include mixins.flex-fd-col;
-        height: 275px;
+        height: 375px;
         border-radius: 25px;
         background-color: palette.$primary-blue;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -50,11 +52,29 @@
     }
 
     .project-img {
-        background-image: url("./assets/images/placeholder.jpg");
         background-position: center;
+        background-size: cover;
         width: 100%;
         height: 100%;
         border-radius: 25px;
+    }
+    #calender.project-img {
+        background-image: url("./assets/images/calender.jpg");
+    }
+    #crypto.project-img {
+        background-image: url("./assets/images/crypto.jpg");
+    }
+    #email.project-img {
+        background-image: url("./assets/images/email.png");
+    }
+    #game.project-img {
+        background-image: url("./assets/images/game.jpg");
+    }
+    #invader.project-img {
+        background-image: url("./assets/images/invader.png");
+    }
+    #notepad.project-img {
+        background-image: url("./assets/images/notepad.jpeg");
     }
 
     .project-info {

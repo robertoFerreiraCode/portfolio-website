@@ -16,31 +16,26 @@
             </li>
         </ul>
         <ul class="link-container">
-            <li class="nav-item">
-                <a class="nav-item__a" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item__a" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item__a" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item__a" href="#contact">Contact</a>
-            </li>
+            <a class="nav-item" href="#home">
+                <li class="nav-item__a">Home</li>
+            </a>
+            <a class="nav-item" href="#projects">
+                <li class="nav-item__a">Projects</li>
+            </a>
+            <a class="nav-item" href="#skills">
+                <li class="nav-item__a">Skills</li>
+            </a>
+            <a class="nav-item" href="#contact">
+                <li class="nav-item__a">Contact</li>
+            </a>
         </ul>
-        <div class="hamburger-container">
-            <input type="checkbox" id="check">
+        <!-- <div class="hamburger-container">
             <label for="check" class="hamburger-container__checkbtn">
+            <a href="javascript:void(0);" class="hamburger-container__icon" onclick="myFunction()">
                 <i class="fas fa-bars"></i>
+            </a>
             </label>
-        </div>
-        <!-- todo -->
-        <!-- <div class="dropdown-content"> 
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div> -->
+        </div>  -->
     </nav>
     
     <section id="home">
@@ -61,7 +56,7 @@
         <div class="flex-container">
             <div class="project-container">
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="notepad">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 1</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -75,7 +70,7 @@
                 </div>
                 
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="calender">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 2</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -88,7 +83,7 @@
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="crypto">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 3</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -101,7 +96,7 @@
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="game">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 4</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -114,7 +109,7 @@
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="invader">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 5</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -127,7 +122,7 @@
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-img">
+                    <div class="project-img" id="email">
                         <div class="project-info">
                             <h3 class="project-info__header"> Project 6</h3>
                             <p class="project-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, elementum a lectus quis, mattis dictum eros. </p
@@ -143,8 +138,12 @@
         <div class="flex-container">
             <div class="split-container">
                 <h1 class="split-container__header split-container__header--blue">About Me</h1>
-                <p class="split-container__para split-container__para--blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae diam massa. In vulputate, sapien et elementum volutpat, odio nibh eleifend erat, at auctor nisl metus at mi. Suspendisse libero nunc, cursus vestibulum porta mollis, tincidunt nec velit. Fusce mattis maximus ipsum, eu condimentum nisl consectetur vestibulum. Curabitur efficitur rhoncus nibh, eget maximus odio malesuada id. Aenean venenatis arcu dui, vitae vehicula nulla lacinia lacinia. Pellentesque posuere erat eget imperdiet fringilla. Integer lacinia fermentum ligula nec sagittis. Nunc dapibus eleifend faucibus. Etiam tempus velit at lacus dictum mattis. Nunc ac tincidunt magna. Etiam non risus quis ipsum pellentesque iaculis et sed augue. Quisque diam tortor, convallis nec eros nec, ultrices egestas nisi. Duis ac pretium libero.</p
+                <p class="split-container__para split-container__para--blue"><i>2020 Bachelor of Science in IT, Enterprise Systems Development major, University of Technology, Sydney</i></p
                 >
+                <p class="split-container__para split-container__para--blue">I am a motivated software developer graduate with a passion for problem solving and technology. I love to learn new things and to constantly develop my skills which I find programming the perfect outlet for. I also enjoy finding creative solutions and thinking outside the box to overcome challenges. I believe these characteristics nicely complement a career in technology and pushed me to pursuing a career in the field. I am currently completing an intense 12 week software consulting course with _nology, which I will gain experince with various web development technologies and the latest industry practices.</p
+                >
+                <p class="split-container__para split-container__para--blue">I love sports and fitness, always keen to play soccer and do some weight training. I enjoy listening to music and recently started to teach myself the guitar.</p
+                    >
                
             </div>
             <div class="split-container split-container--blue">
@@ -157,6 +156,9 @@
                         <i class="fab fa-react icons"></i>
                         <i class="fab fa-sass icons"></i>
                         <i class="fab fa-java icons"></i>
+                        <i class="fab fa-git icons"></i>
+                        <i class="fas fa-leaf icons"></i>
+                        <i class="fab fa-aws icons"></i>
                     </div>
                 </div>
             </div>
