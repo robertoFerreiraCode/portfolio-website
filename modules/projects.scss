@@ -1,0 +1,117 @@
+@use "./../partials/palette";
+@use "./../partials/typography";
+@use "./../partials/mixins";
+@use "./../partials/devices" as media;
+
+#projects {
+    background-color: palette.$primary-sand;
+    width: 100vw;
+    min-height: 100vh;
+
+    h1 {
+        color: palette.$primary-blue;
+        text-shadow: #000 0px 0px 1px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .flex-container {
+        @include mixins.flex-ai-c;
+        width: 100vw;
+        height: 100%;
+        // background-color: palette.$primary-blue-light;
+    }
+
+    .project-container {
+        display: grid;
+        gap: 20px;
+        margin: 5% 15%;
+        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        @include media.phone {
+            grid-template-columns: 1fr;
+            margin: 0 5%;
+        }
+        @include media.tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include media.tablet-landscape {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .project {
+        @include mixins.flex-fd-col;
+        height: 375px;
+        border-radius: 25px;
+        background-color: palette.$primary-blue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .project-img {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+    #calender.project-img {
+        background-image: url("./assets/images/calender.jpg");
+    }
+    #crypto.project-img {
+        background-image: url("./assets/images/crypto.jpg");
+    }
+    #email.project-img {
+        background-image: url("./assets/images/email.png");
+    }
+    #game.project-img {
+        background-image: url("./assets/images/game.jpg");
+    }
+    #invader.project-img {
+        background-image: url("./assets/images/invader.png");
+    }
+    #notepad.project-img {
+        background-image: url("./assets/images/notepad.jpeg");
+    }
+
+    .project-info {
+        @include mixins.flex-fd-col;
+        visibility: hidden;
+        margin: 0;
+        height: 100%;
+        background-color: palette.$primary-blue;
+        border-radius: 25px;
+        &__header {
+            color: white;
+            font-size: 30px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        &__description {
+            color: white;
+            padding: 0 10px;
+            text-align: center;
+        }
+        &__icons {
+            padding: 0 20px;
+            font-size: 35px;
+            color: palette.$primary-red;
+        }
+    }
+
+    .project:hover .project-img {
+        visibility: hidden;
+    }
+
+    .project:hover .project-info {
+        visibility: visible;
+        // border: 2px solid white;
+    }
+
+    .project-info__icons:hover {
+        color: white;
+    }
+}

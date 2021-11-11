@@ -1,0 +1,130 @@
+@use "./../partials/palette";
+@use "./../partials/typography";
+@use "./../partials/mixins";
+@use "./../partials/devices" as media;
+
+.nav {
+    @include mixins.flex-jc-sb;
+    height: 50px;
+    width: 100vw;
+    background-color: palette.$primary-sand;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.name-container {
+    @include mixins.flex-ai-c;
+    // width: 40%;
+    padding: 10px;
+    margin: 0;
+    width: 40vw;
+    &__a {
+        font-weight: bold;
+        color: palette.$primary-red;
+    }
+    &__a:hover {
+        color: palette.$primary-blue;
+    }
+    // @include media.phone {
+    //     width: 60vw;
+    // }
+    // @include media.not-phone {
+    //     width: 40vw;
+    // }
+}
+
+.link-container {
+    @include mixins.flex-ai-c;
+    @include mixins.flex-jc-c;
+    height: 100%;
+    margin: 0;
+    width: 60vw;
+    // @include media.phone {
+    //     width: 60vw;
+    // }
+    // @include media.not-phone {
+    //     width: 60vw;
+    // }
+}
+
+.nav-item {
+    @include mixins.flex-ai-c;
+    @include mixins.flex-jc-c;
+    height: 100%;
+    width: 100%;
+    &__a {
+        // height: 100%;
+        color: palette.$primary-blue;
+        font-weight: bold;
+        &--title {
+            color: palette.$primary-red;
+        }
+    }
+    &--title {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    @include media.phone {
+        &__a {
+            // display: none;
+            &--title {
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        }
+    }
+    @include media.tablet {
+        &__a {
+            &--title {
+                font-size: 20px;
+            }
+        }
+    }
+    @include media.tablet-landscape {
+        &__a {
+            &--title {
+                font-size: 25px;
+            }
+        }
+    }
+    @include media.laptop {
+        &__a {
+            &--title {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.hamburger-container {
+    @include mixins.flex-ai-c;
+    &__icon {
+        font-size: 20px;
+        color: palette.$primary-blue;
+        margin-right: 20px;
+        cursor: pointer;
+        list-style: none;
+        @include media.not-phone {
+            display: none;
+        }
+    }
+}
+
+#check {
+    display: none;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav-item:hover .nav-item__a {
+    // color: palette.$primary-blue-light;
+    color: palette.$primary-red;
+}
+
+.nav-item--title:hover .nav-item__a--title {
+    // color: palette.$primary-blue-light;
+    color: palette.$primary-blue;
+}

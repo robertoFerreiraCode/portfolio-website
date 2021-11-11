@@ -1,0 +1,83 @@
+@use "./../partials/palette";
+@use "./../partials/typography";
+@use "./../partials/mixins";
+@use "./../partials/devices" as media;
+
+#skills {
+    padding: 0;
+    min-height: 100vh;
+    .flex-container {
+        @include mixins.flex-jc-c;
+        width: 100%;
+        @include media.phone {
+            display: block;
+        }
+        @include media.tablet {
+            display: block;
+        }
+        @include media.tablet-landscape {
+            display: block;
+        }
+    }
+
+    .split-container {
+        @include mixins.flex-fd-col;
+        width: 50vw;
+        min-height: 100vh;
+        background-color: white;
+        &__header {
+            color: white;
+            text-align: center;
+            text-shadow: #000 0px 0px 1px;
+            font-weight: bold;
+            font-size: 40px;
+            &--blue {
+                color: palette.$primary-blue;
+            }
+        }
+        &__para {
+            font-size: 30px;
+            color: white;
+            padding: 0 100px;
+            &--blue {
+                color: palette.$primary-blue;
+            }
+            @include media.phone {
+                font-size: 20px;
+                padding: 0 50px;
+            }
+            @include media.tablet {
+                font-size: 25px;
+                padding: 0 50px;
+            }
+        }
+        &--blue {
+            background-color: palette.$primary-blue;
+        }
+        @include media.phone {
+            width: 100vw;
+        }
+        @include media.tablet {
+            width: 100vw;
+        }
+        @include media.tablet-landscape {
+            width: 100vw;
+        }
+
+        .icon-container {
+            margin-top: 100px;
+            &__icons {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 100px 100px;
+                font-size: 50px;
+                color: white;
+                @include media.phone {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}

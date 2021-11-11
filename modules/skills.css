@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+#skills {
+  padding: 0;
+  min-height: 100vh;
+}
+
+#skills .flex-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  #skills .flex-container {
+    display: block;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #skills .flex-container {
+    display: block;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #skills .flex-container {
+    display: block;
+  }
+}
+#skills .split-container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 100vh;
+  background-color: white;
+}
+
+#skills .split-container__header {
+  color: white;
+  text-align: center;
+  text-shadow: #000 0px 0px 1px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#skills .split-container__header--blue {
+  color: #061536;
+}
+
+#skills .split-container__para {
+  font-size: 30px;
+  color: white;
+  padding: 0 100px;
+}
+
+#skills .split-container__para--blue {
+  color: #061536;
+}
+
+@media only screen and (max-width: 576px) {
+  #skills .split-container__para {
+    font-size: 20px;
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #skills .split-container__para {
+    font-size: 25px;
+    padding: 0 50px;
+  }
+}
+#skills .split-container--blue {
+  background-color: #061536;
+}
+
+@media only screen and (max-width: 576px) {
+  #skills .split-container {
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #skills .split-container {
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #skills .split-container {
+    width: 100vw;
+  }
+}
+#skills .split-container .icon-container {
+  margin-top: 100px;
+}
+
+#skills .split-container .icon-container__icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 100px 100px;
+  font-size: 50px;
+  color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  #skills .split-container .icon-container__icons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

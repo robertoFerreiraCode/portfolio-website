@@ -1,0 +1,33 @@
+@use "./../partials/palette";
+@use "./../partials/typography";
+@use "./../partials/mixins";
+@use "./../partials/devices" as media;
+
+#contact {
+    padding: 0;
+    .contact-container {
+        @include mixins.flex-fd-col;
+        // background-color: palette.$primary-blue-light;
+        background-color: lightgray;
+        height: 100%;
+        &__header {
+            font-size: 50px;
+            color: palette.$primary-blue;
+            text-shadow: #000 0px 0px 1px;
+        }
+    }
+    .icons {
+        font-size: 50px;
+        padding: 30px 50px;
+    }
+    a {
+        font-size: 25px;
+        font-weight: bold;
+        color: palette.$primary-blue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: palette.$primary-red;
+    }
+}
